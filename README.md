@@ -14,8 +14,36 @@ To encrypt and decrypt the given message by using Caeser Cipher encryption algor
 5. Display the decrypted text.  
 
 ## PROGRAM: 
+```
+#include<stdio.h> 
+#include<string.h>
+#include<ctype.h>
+int main() {
+    char plain[100], cipher[100]; int key, i, length;
+    printf("Enter the plain text: ");
+    scanf("%s", plain); 
+    printf("Enter the key value: ");
+    scanf("%d", &key);
+    printf("\nPLAIN TEXT: %s", plain);
+    printf("\nENCRYPTED TEXT: ");
+    length = strlen(plain);
+    for (i = 0; i < length; i++) 
+    { 
+        cipher[i] = plain[i] + key;
+        if (isupper(plain[i]) && cipher[i] > 'Z') 
+        { 
+            cipher[i]= cipher[i] - 26; 
+            
+        } 
+        if (islower(plain[i]) && cipher[i] > 'z') 
+        { cipher[i] = cipher[i] - 26; }
+
+```
 
 ## OUTPUT: 
+<img width="627" height="341" alt="image" src="https://github.com/user-attachments/assets/5639bcee-eb18-41e2-be1e-080955a71218" />
+
+
 
 ## RESULT: 
 The program implementing the Caesar cipher for encryption and decryption has been successfully  executed, and the results have been verified.
